@@ -1,0 +1,11 @@
+import { chromium } from 'playwright'
+const b = await chromium.launch({ args: ['--no-sandbox', '--use-gl=swiftshader', '--enable-unsafe-swiftshader'] })
+const ctx = await b.newContext({ viewport: { width: 1440, height: 1000 }, deviceScaleFactor: 1 })
+const p = await ctx.newPage()
+await p.goto('http://localhost:3000/hu', { waitUntil: 'networkidle' })
+await p.mouse.move(900, 500); await p.mouse.wheel(0, 30)
+await p.waitForTimeout(6000)
+const el = await p.$('.hero__visual')
+await el.screenshot({ path: '/home/user/shots/globe-live.png' })
+await ctx.close(); await b.close()
+console.log('ok')

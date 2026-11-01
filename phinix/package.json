@@ -1,0 +1,40 @@
+{
+  "name": "phinix",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PHINIX \u2014 web development studio. High-performance, bilingual, SEO-first website with an interactive 3D globe.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "node tools/make_og.mjs && next build",
+    "start": "next start",
+    "lint": "next lint",
+    "typecheck": "tsc --noEmit",
+    "assets:og": "node tools/make_og.mjs",
+    "assets:globe": "python3 tools/make_textures.py",
+    "assets:logo": "node tools/logo/embed.mjs && node tools/logo/make-icons.mjs",
+    "mail:test": "node tools/mail-send-test.mjs",
+    "mail:check": "node tools/mail-check.mjs"
+  },
+  "dependencies": {
+    "@types/nodemailer": "^8.0.2",
+    "next": "15.5.28",
+    "nodemailer": "^10.3.1",
+    "react": "19.3.1",
+    "react-dom": "19.3.1",
+    "three": "0.187.0",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@resvg/resvg-js": "^2.6.2",
+    "@types/node": "24.10.1",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
+    "@types/three": "0.187.0",
+    "lighthouse": "^12.8.2",
+    "mailparser": "^3.14.1",
+    "playwright": "^1.56.1",
+    "satori": "^0.18.3",
+    "smtp-server": "^3.21.3",
+    "typescript": "5.9.3"
+  }
+}

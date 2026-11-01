@@ -1,0 +1,42 @@
+{
+  "$comment": [
+    "PHINIX — referencia-munkák. Ez a fájl a portfólió EGYETLEN forrása.",
+    "",
+    "Egy munka felvétele:",
+    "  1. borító:  public/covers/<slug>.webp  (1600×1100, ~150 kB, WebP)",
+    "  2. ide be egy blokkot a \"projects\" tömbbe (lásd a mintát lejjebb, kikommentelve)",
+    "  3. mentés → a szekció azonnal megjeleníti (dev), élesben: npm run build",
+    "",
+    "Amíg a tömb üres, a Munkák szekció 'hamarosan' állapotot mutat, ami",
+    "professzionálisabb, mint egy üres rács."
+  ],
+  "projects": [],
+  "$example": {
+    "slug": "pelda-ceg",
+    "client": "Példa Kft.",
+    "title": {
+      "hu": "Amit a weboldal hozott",
+      "en": "What the website brought"
+    },
+    "category": {
+      "hu": "Vállalati weboldal",
+      "en": "Corporate website"
+    },
+    "year": "2026",
+    "result": {
+      "hu": "+38% ajánlatkérés 3 hónap alatt",
+      "en": "+38% enquiries in 3 months"
+    },
+    "desc": {
+      "hu": "Egyedi dizájn, gyors betöltés, Google-barát szerkezet — a régi oldal teljes újraépítése.",
+      "en": "Custom design, fast loading, a Google-friendly structure — a full rebuild."
+    },
+    "tags": [
+      "Next.js",
+      "SEO",
+      "Design"
+    ],
+    "cover": "/covers/pelda-ceg.webp",
+    "showcase": false
+  }
+}
